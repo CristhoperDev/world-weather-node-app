@@ -1,3 +1,6 @@
 const argv = require('./config/yargs').argv;
 
-console.log(argv.city);
+const place = require('./place/place')
+
+place.getCityLatLng(argv.city)
+    .then(response => console.log(response))
